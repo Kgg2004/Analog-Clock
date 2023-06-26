@@ -1,0 +1,88 @@
+body{
+  overflow: hidden;
+}
+.digi{
+    position: relative;
+    z-index: 3;
+    font-size:3vw;
+    margin-top: -3vw;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-family: cursive;
+    color: rgb(82, 112, 8)
+    
+}
+.text1{
+   position: relative;
+margin-top: 1.5vw;
+margin-left: 32vw;
+margin-right: 30vw;
+padding: 1vw 1vw ;
+background-color: beige;
+
+
+
+color: brown;
+font-size: 3vw;
+font-family: "Lucida Console", "Courier New", monospace;
+font-weight: 700;
+box-shadow: 2px 2px 5px black;
+}
+.clock{
+    height: 40vw;
+    width: 30vw;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH_BcN-U_dWPhOG6eC2ERvNhvu4z5My3qJo3vChf52Tg&usqp=CAU&ec=48665701') no-repeat;
+    background-size: 100%;
+    margin: auto;
+    position: relative;
+    top: 2vw;
+    overflow: hidden;
+    
+
+    
+}
+.hour,.min,.sec{
+    position: relative;
+    border-radius: 30px;
+    transform-origin: bottom;
+    
+}
+
+.hour{
+    
+    width: 1.2%;
+    height: 22%;
+    background: black;
+    
+   left: 49.3%;
+    top: 15.5%;
+    
+}
+.min{
+    width: 1.1%;
+    height: 31%;
+    background: black;
+    
+   left: 49.35%;
+    top: -15.5%;
+}
+.sec{
+    width: 0.7%;
+    height: 33%;
+    background:red;
+    
+   left: 49.6%;
+    top: -48.5%;
+}
+@media screen and (max-width:500px){
+    .container{
+        top: 500px;
+    }
+    .text1{
+        top:15vh;
+    }
+    .clock{
+        top: 20vh;
+    }
+}

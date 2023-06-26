@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+   
+setInterval(() => {
+    hor=document.querySelector('.hour');
+minute=document.querySelector('.min');
+second=document.querySelector('.sec');
+    d=new Date();
+    h=d.getHours();
+    m=d.getMinutes();
+    s=d.getSeconds();
+
+    hr=30*h + m/2;
+    mr=6*m;
+    s=6*s;
+    hor.style.transform=`rotate(${hr}deg)`;
+    minute.style.transform=`rotate(${mr}deg)`;
+    second.style.transform=`rotate(${s}deg)`;
+
+   
+}, 1000);
+setInterval(() => {
+    da=new Date();
+    ht=da.getHours();
+    mt=da.getMinutes();
+    st=da.getSeconds();
+
+    
+    ht=ht<10?"0" + ht :ht;
+    
+    mt=mt<10?"0" + mt :mt;
+    
+    st=st<10?"0" + st :st;
+
+
+    document.querySelector('.digi').innerHTML=ht + ":"+ mt + ":" + st ;
+    
+
+}, 1000);
+</script>
+<body>
+    <div class="container">
+    <div class="text1">
+        Get  Your Time  Here
+    </div>
+    
+    
+    <div class="clock">
+        
+            
+        
+        <div class="hour"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+        <div class="digi">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
